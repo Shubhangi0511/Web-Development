@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Modals</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            .btn-1{
+            margin-top: 300px;
+            height: 50px;
+        }
+        </style>
+    </head>
+    <body class="container-fluid">
+     
+        <button class="btn-1 btn btn-primary justify-content-center align-items-center w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Click Here To Register New User <span class="bi bi-arrow-right-circle-fill"></span></button>
+        
+
+        <div class="modal fade modal-fullscreen" id="registerModal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Register new User</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>UserName</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                            <dt>Email</dt>
+                            <dd><input type="email"></dd>
+                            <dt>UserName</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                            <dt>Email</dt>
+                            <dd><input type="email"></dd>
+                            <dt>UserName</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                            <dt>Email</dt>
+                            <dd><input type="email"></dd>
+                            <dt>UserName</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                            <dt>Email</dt>
+                            <dd><input type="email"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Login Page</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script type="text/javascript">
+            var userdetails = {
+                Email: 'John@gmail.com',
+                Mobile : '9876543211',
+                Password: 'John@12'
+            };
+            function ContinueClick(){
+                var userid = document.getElementById("txtUser").value;
+                if (userid==userdetails.Email) {
+                    // document.write(`Login success with your email ${userid}`);
+                    document.getElementById("password").style.display = "block";
+                    document.getElementById("userid").style.display = "none";
+                }
+                else if(userid==userdetails.Mobile){
+                    // document.write(`Login success with your mobile ${userid}`);
+                    document.getElementById("password").style.display = "block";
+                    document.getElementById("userid").style.display = "none";
+                }else{
+                    document.getElementById("userError").innerHTML = "Please Enter valid email or mobile number";
+                }
+            }
+            function ConfirmClick(){
+                var password = document.getElementById("txtPwd").value;
+                if(password==userdetails.Password){
+                    document.write("Login Success You Are");
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="height: 600px;">
+        <div>
+            <h2>Admin Sign In Page</h2>
+            <div id="userid">
+                <label class="form-label">Sign in with Email or Mobile</label>
+                <div>
+                    <input type="text" id="txtUser" class="form-control">
+                    <div class="text-danger" id="userError"></div>
+                </div>
+                <div class="mt-2">
+                    <button class="btn btn-warning w-100" onclick="ContinueClick()">
+                        Continue
+                    </button>
+                </div>
+            </div>
+            <div id="password" style="display: none;">
+                <label class="form-label">Password</label>
+                <div>
+                    <input type="password" id="txtPwd" class="form-control">
+                </div>
+                <div class="mt-2">
+                    <button class="btn btn-warning w-100" onclick="ConfirmClick()">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
